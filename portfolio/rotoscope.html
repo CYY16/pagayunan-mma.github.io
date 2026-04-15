@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>1-Minute Rotoscope Project | Portfolio</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-logo">PORTFOLIO</div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../index.html#projects">Projects</a></li>
+      <li><a href="../index.html#about">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- PROJECT HERO -->
+  <section class="project-hero">
+    <a href="../index.html" class="back-link">← Back to Projects</a>
+    <div class="project-hero-tag">Animation · Rotoscope</div>
+    <h1>1-Minute Rotoscope Video</h1>
+    <p>A frame-by-frame animation created using the tracing technique with an auto-brush tool in Adobe After Effects.</p>
+    <div class="tool-badges">
+      <span class="tool-badge">Adobe After Effects</span>
+      <span class="tool-badge">Adobe Premiere Pro</span>
+      <span class="tool-badge">CapCut</span>
+    </div>
+    <p class="disclaimer">Disclaimer: This video was created for academic purposes only.</p>
+  </section>
+
+  <!-- VIDEO -->
+  <section class="video-section">
+    <div class="video-wrapper">
+      <div class="video-placeholder">
+        <p>Video player here</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEP-BY-STEP TUTORIAL -->
+  <section class="steps-section">
+    <h2 class="section-title">Step-by-Step Tutorial</h2>
+    <div class="steps-list">
+
+      <div class="step-item">
+        <div class="step-num">1</div>
+        <div class="step-text">
+          <h5>Select Source Material</h5>
+          <p>Choose a high-quality video with clear subject-background contrast and interesting movement patterns.</p>
+          <!-- No image for step 1 -->
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-num">2</div>
+        <div class="step-text">
+          <h5>Cut the Video into 5-Second Clips</h5>
+          <p>Use CapCut to split the selected video into 5-second segments for easier editing.</p>
+          <!-- REPLACE src with your actual screenshot -->
+          <img src="../images/capcut.png" alt="Cutting video into clips in CapCut" />
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-num">3</div>
+        <div class="step-text">
+          <h5>Create a New Composition</h5>
+          <p>In After Effects, create a separate 5-second composition for each clip segment.</p>
+          <img src="../images/composition.png" alt="Creating new composition in After Effects" />
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-num">4</div>
+        <div class="step-text">
+          <h5>Trace Each Layer</h5>
+          <p>Isolate the subject into separate layers (shirt, pants, body, hair, shoes) using the Roto Brush Tool. Freeze each layer to edit others independently.</p>
+          <img src="../images/layer.png" alt="Using Roto Brush Tool to isolate subject" />
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-num">5</div>
+        <div class="step-text">
+          <h5>Add Fill Colors to Layers</h5>
+          <p>Apply solid color fills to each isolated layer (shirt, pants, hair, etc.) to prepare for stylization.</p>
+          <img src="../images/trace.png" alt="Adding fill colors to layers" />
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-num">6</div>
+        <div class="step-text">
+          <h5>Render All Compositions</h5>
+          <p>Export each 5-second composition through the Render Queue with consistent settings.</p>
+          <img src="../images/render.png" alt="Rendering compositions in After Effects" />
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-num">7</div>
+        <div class="step-text">
+          <h5>Compile All 5-Second Clips</h5>
+          <p>Combine all clips in CapCut, add audio, and export in mp4 format.</p>
+          <img src="../images/export.png" alt="Compiling clips in CapCut" />
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-num">8</div>
+        <div class="step-text">
+          <h5>Edit Lyrics & Background</h5>
+          <p>Use Adobe Premiere Pro to add lyrics, sync them with the audio, and change background colors to enhance visual appeal.</p>
+          <img src="../images/lyrics.png" alt="Editing lyrics in Adobe Premiere Pro" />
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WEEKLY PROGRESS -->
+  <section class="progress-section">
+    <h2 class="section-title">Weekly Progress</h2>
+    <div class="weeks-tabs" id="weekTabs"></div>
+    <div class="week-content" id="weekContent"></div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2024 My Portfolio · Built with HTML, CSS & GitHub Pages</p>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
