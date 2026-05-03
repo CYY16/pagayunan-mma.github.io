@@ -7,7 +7,7 @@
 const weekData = [
   {
     title: "Week 1 — Planning & Research",
-    content: "Selected the source video and researched rotoscope techniques. Watched tutorials on using the Roto Brush tool in Adobe After Effects."
+    content: "Selected the source video and researched rotoscope techniques. Watched tutorials on using the Roto Brush tool in Adobe After Effects. <a href=\"https://www.youtube.com/watch?v=5i5E24-8nxk\" target=\"_blank\" rel=\"noopener noreferrer\">Watch the Week 1 tutorial video</a>."
   },
   {
     title: "Week 2 — Setup",
