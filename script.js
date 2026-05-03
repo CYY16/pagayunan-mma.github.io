@@ -11,11 +11,11 @@ const weekData = [
   },
   {
     title: "Week 2 — Setup",
-    content: "Installed and set up After Effects and CapCut. Learned the basics of composition settings and timeline navigation. <br /><a href=\"https://www.youtube.com/watch?v=-xObmKhBmAU\" target=\"_blank\" rel=\"noopener noreferrer\">Watch the Week 2 tutorial video</a>.<br /><br /><iframe width=\"100%\" height=\"315\" src=\"https://www.youtube.com/embed/-xObmKhBmAU\" title=\"Week 2 Rotoscope Tutorial\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+    content: "Installed and set up After Effects and CapCut. Learned the basics of composition settings and timeline navigation. <br /><a href=\"https://youtu.be/-xObmKhBmAU\" target=\"_blank\" rel=\"noopener noreferrer\">Watch the Week 2 tutorial video</a>.<br /><br /><iframe width=\"100%\" height=\"315\" src=\"https://www.youtube.com/embed/-xObmKhBmAU\" title=\"Week 2 Rotoscope Tutorial\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   },
   {
     title: "Week 3 — Cutting Clips",
-    content: "Used CapCut to cut the 1-minute video into 5-second segments. Organized all clips into a dedicated project folder. <br /><a href=\"https://www.youtube.com/watch?v=uEq3Wj1c7Sw\" target=\"_blank\" rel=\"noopener noreferrer\">Watch the Week 3 tutorial video</a>.<br /><br /><iframe width=\"100%\" height=\"315\" src=\"https://www.youtube.com/embed/uEq3Wj1c7Sw\" title=\"Week 3 Rotoscope Tutorial\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+    content: "Used CapCut to cut the 1-minute video into 5-second segments. Organized all clips into a dedicated project folder. <br /><a href=\"https://youtu.be/uEq3Wj1c7Sw\" target=\"_blank\" rel=\"noopener noreferrer\">Watch the Week 3 tutorial video</a>.<br /><br /><iframe width=\"100%\" height=\"315\" src=\"https://www.youtube.com/embed/uEq3Wj1c7Sw\" title=\"Week 3 Rotoscope Tutorial\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   },
   {
     title: "Week 4 — Compositions in AE",
