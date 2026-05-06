@@ -19,7 +19,7 @@ const weekData = [
   },
   {
     title: "Week 4 — Compositions in AE",
-    content: "Created individual compositions in After Effects for each 5-second clip segment. Set up consistent composition settings across all clips."
+    content: "Created individual compositions in After Effects for each 5-second clip segment. Set up consistent composition settings across all clips. <br /><a href=\"https://youtu.be/oisUJiUzHtg\" target=\"_blank\" rel=\"noopener noreferrer\">Watch the Week 4 tutorial video</a>.<br /><br /><iframe width=\"100%\" height=\"315\" src=\"https://www.youtube.com/embed/oisUJiUzHtg\" title=\"Week 4 Rotoscope Tutorial\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   },
   {
     title: "Week 5 — Roto Brush Tracing",
