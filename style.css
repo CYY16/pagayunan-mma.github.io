@@ -463,8 +463,6 @@ img { max-width: 100%; display: block; border-radius: 12px; }
   font-weight: 800;
   color: #D0CECA;
   line-height: 1;
-  -webkit-user-select: none;
-  -moz-user-select: none;
   user-select: none;
 }
 
