@@ -58,7 +58,6 @@ img { max-width: 100%; display: block; border-radius: 12px; }
   padding: 20px 40px;
   position: relative;
   z-index: 100;
-  pointer-events: none;
 }
 
 .brand-logo {
