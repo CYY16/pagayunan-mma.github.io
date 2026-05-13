@@ -6,6 +6,208 @@
   <title>Solar System Project | Portfolio</title>
   <link rel="stylesheet" href="../style.css">
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <style>
+    .solar-hero {
+      padding: 80px 40px 60px;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .solar-hero h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      font-family: 'Syne', sans-serif;
+      margin-bottom: 12px;
+      color: #1A1A1A;
+    }
+
+    .solar-hero p {
+      font-size: 1.1rem;
+      color: #666;
+      margin-bottom: 24px;
+    }
+
+    .video-embed {
+      position: relative;
+      width: 100%;
+      max-width: 900px;
+      margin: 40px auto;
+      aspect-ratio: 16 / 9;
+      background: #D3D0CB;
+      border-radius: 12px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .video-embed:hover {
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+      transform: translateY(-4px);
+    }
+
+    .video-embed-inner {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #D3D0CB 0%, #C9C6BD 100%);
+      position: relative;
+    }
+
+    .play-button {
+      width: 80px;
+      height: 80px;
+      background: rgba(26, 26, 26, 0.85);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .video-embed:hover .play-button {
+      background: rgba(26, 26, 26, 0.95);
+      transform: scale(1.1);
+    }
+
+    .play-button::after {
+      content: '';
+      width: 0;
+      height: 0;
+      border-left: 28px solid #EAE8E4;
+      border-top: 18px solid transparent;
+      border-bottom: 18px solid transparent;
+      margin-left: 6px;
+    }
+
+    .planet-section {
+      padding: 60px 40px;
+      max-width: 1000px;
+      margin: 0 auto;
+      border-bottom: 1px solid rgba(26, 26, 26, 0.1);
+    }
+
+    .planet-section:last-of-type {
+      border-bottom: none;
+    }
+
+    .planet-section h2 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      font-family: 'Syne', sans-serif;
+      color: #1A1A1A;
+      margin-bottom: 24px;
+    }
+
+    .planet-info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-bottom: 32px;
+    }
+
+    .info-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .info-label {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .info-value {
+      font-size: 1.1rem;
+      color: #1A1A1A;
+    }
+
+    .planet-description {
+      margin-bottom: 32px;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #333;
+    }
+
+    .fun-facts {
+      background: rgba(26, 26, 26, 0.03);
+      padding: 24px;
+      border-radius: 8px;
+      margin-top: 24px;
+    }
+
+    .fun-facts h4 {
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #1A1A1A;
+      font-size: 0.95rem;
+    }
+
+    .fun-facts ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .fun-facts li {
+      margin-bottom: 8px;
+      padding-left: 20px;
+      position: relative;
+      color: #333;
+      font-size: 0.95rem;
+    }
+
+    .fun-facts li:before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: #666;
+    }
+
+    .overview-section {
+      padding: 60px 40px;
+      max-width: 1000px;
+      margin: 0 auto;
+      border-bottom: 1px solid rgba(26, 26, 26, 0.1);
+    }
+
+    .overview-section h2 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      font-family: 'Syne', sans-serif;
+      color: #1A1A1A;
+      margin-bottom: 24px;
+    }
+
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 24px;
+    }
+
+    .tool-item {
+      background: rgba(26, 26, 26, 0.05);
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .tool-item h4 {
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #1A1A1A;
+    }
+
+    .tool-item p {
+      font-size: 0.95rem;
+      color: #666;
+    }
+  </style>
 </head>
 <body>
 
@@ -19,143 +221,351 @@
     </ul>
   </nav>
 
-  <!-- PROJECT HERO -->
-  <section class="project-hero">
-    <a href="../index.html" class="back-link">← Back to Home</a>
-    <div class="project-hero-tag">3D Model</div>
+  <!-- HERO -->
+  <section class="solar-hero">
     <h1>Solar System</h1>
-    <div class="tool-badges">
-      <span class="tool-badge">Blender</span>
+    <p>A 3D model of the solar system with all planets rendered in Blender.</p>
+  </section>
+
+  <!-- VIDEO EMBED -->
+  <a href="#" class="video-embed" target="_blank" title="Solar System Animation">
+    <div class="video-embed-inner">
+      <div class="play-button"></div>
+    </div>
+  </a>
+
+  <!-- PROJECT OVERVIEW -->
+  <section class="overview-section">
+    <h2>Project Overview</h2>
+    <p style="margin-bottom: 24px; font-size: 1.05rem; line-height: 1.8; color: #333;">
+      This solar system model combines artistic visualization with scientific accuracy. Each celestial body is rendered in 3D with realistic proportions and orbital characteristics.
+    </p>
+    <div class="tools-grid">
+      <div class="tool-item">
+        <h4>Tools Used</h4>
+        <p>Blender 4.0</p>
+      </div>
+      <div class="tool-item">
+        <h4>Render Time</h4>
+        <p>Custom render settings</p>
+      </div>
+      <div class="tool-item">
+        <h4>Resolution</h4>
+        <p>1920 x 1080</p>
+      </div>
     </div>
   </section>
 
   <!-- PLANETS SHOWCASE -->
-  <section class="steps-section">
-    <h2 class="section-title">The Planets</h2>
-    <div class="projects-grid">
-
-      <div class="project-card placeholder-card">
-        <div class="card-thumb" style="background: radial-gradient(circle at 40% 40%, #FDB97D, #F4A23A, #C8711A);">
-          <svg width="80" height="80" viewBox="0 0 80 80"><circle cx="40" cy="40" r="36" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1"/></svg>
-        </div>
-        <div class="card-body">
-          <span class="card-tag">01 — Rocky</span>
-          <h3>Mercury</h3>
-          <p>The smallest planet and closest to the Sun. It has no atmosphere and experiences extreme temperature swings.</p>
-          <div class="card-tools">
-            <span>Diameter: 4,879 km</span>
-            <span>Moons: 0</span>
-          </div>
-        </div>
+  <section class="planet-section">
+    <h2>Mercury</h2>
+    <p class="planet-description">The smallest planet and closest to the Sun. It has no atmosphere and experiences extreme temperature swings.</p>
+    <div class="planet-info">
+      <div class="info-item">
+        <span class="info-label">Diameter</span>
+        <span class="info-value">4,879 km</span>
       </div>
-
-      <div class="project-card placeholder-card">
-        <div class="card-thumb" style="background: radial-gradient(circle at 40% 40%, #F5DEB3, #E8C47A, #C4983A);">
-          <svg width="80" height="80" viewBox="0 0 80 80"><circle cx="40" cy="40" r="36" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1"/></svg>
-        </div>
-        <div class="card-body">
-          <span class="card-tag">02 — Rocky</span>
-          <h3>Venus</h3>
-          <p>The hottest planet due to its thick atmosphere of CO₂. Often called Earth's twin because of similar size.</p>
-          <div class="card-tools">
-            <span>Diameter: 12,104 km</span>
-            <span>Moons: 0</span>
-          </div>
-        </div>
+      <div class="info-item">
+        <span class="info-label">Distance from Sun</span>
+        <span class="info-value">57.9 million km</span>
       </div>
-
-      <div class="project-card placeholder-card">
-        <div class="card-thumb" style="background: radial-gradient(circle at 40% 40%, #6AAFE6, #3A7DC9, #1A4F8A);">
-          <svg width="80" height="80" viewBox="0 0 80 80"><circle cx="40" cy="40" r="36" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1"/></svg>
-        </div>
-        <div class="card-body">
-          <span class="card-tag">03 — Rocky</span>
-          <h3>Earth</h3>
-          <p>Our home planet. The only known planet to harbor life, with liquid water and a protective magnetic field.</p>
-          <div class="card-tools">
-            <span>Diameter: 12,742 km</span>
-            <span>Moons: 1</span>
-          </div>
-        </div>
+      <div class="info-item">
+        <span class="info-label">Orbital Period</span>
+        <span class="info-value">88 Earth days</span>
       </div>
-
-      <div class="project-card placeholder-card">
-        <div class="card-thumb" style="background: radial-gradient(circle at 40% 40%, #E27B52, #C1440E, #8B2500);">
-          <svg width="80" height="80" viewBox="0 0 80 80"><circle cx="40" cy="40" r="36" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1"/></svg>
-        </div>
-        <div class="card-body">
-          <span class="card-tag">04 — Rocky</span>
-          <h3>Mars</h3>
-          <p>The Red Planet. Home to Olympus Mons, the tallest volcano in the solar system. A target for future exploration.</p>
-          <div class="card-tools">
-            <span>Diameter: 6,779 km</span>
-            <span>Moons: 2</span>
-          </div>
-        </div>
+      <div class="info-item">
+        <span class="info-label">Moons</span>
+        <span class="info-value">0</span>
       </div>
-
-      <div class="project-card placeholder-card">
-        <div class="card-thumb" style="background: radial-gradient(circle at 40% 40%, #F0D9A0, #C8A86A, #8C6A2A); position: relative;">
-          <div style="position:absolute;width:120px;height:12px;background:rgba(200,168,106,0.4);border-radius:50%;border:1px solid rgba(200,168,106,0.6);top:50%;left:50%;transform:translate(-50%,-50%) rotateX(70deg);"></div>
-          <svg width="80" height="80" viewBox="0 0 80 80"><circle cx="40" cy="40" r="36" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1"/></svg>
-        </div>
-        <div class="card-body">
-          <span class="card-tag">05 — Gas Giant</span>
-          <h3>Jupiter</h3>
-          <p>The largest planet in the solar system. Its Great Red Spot is a storm that has raged for hundreds of years.</p>
-          <div class="card-tools">
-            <span>Diameter: 139,820 km</span>
-            <span>Moons: 95</span>
-          </div>
-        </div>
+      <div class="info-item">
+        <span class="info-label">Temperature</span>
+        <span class="info-value">-173°C to 427°C</span>
       </div>
-
-      <div class="project-card placeholder-card">
-        <div class="card-thumb" style="background: radial-gradient(circle at 40% 40%, #E8D5A3, #C4A96A, #8A7040); position: relative;">
-          <div style="position:absolute;width:130px;height:10px;background:rgba(196,169,106,0.35);border-radius:50%;border:2px solid rgba(196,169,106,0.5);top:50%;left:50%;transform:translate(-50%,-50%) rotateX(75deg);"></div>
-          <svg width="80" height="80" viewBox="0 0 80 80"><circle cx="40" cy="40" r="36" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1"/></svg>
-        </div>
-        <div class="card-body">
-          <span class="card-tag">06 — Gas Giant</span>
-          <h3>Saturn</h3>
-          <p>Famous for its stunning ring system made of ice and rock. The least dense planet — it could float on water.</p>
-          <div class="card-tools">
-            <span>Diameter: 116,460 km</span>
-            <span>Moons: 146</span>
-          </div>
-        </div>
+      <div class="info-item">
+        <span class="info-label">Composition</span>
+        <span class="info-value">Iron core, silicate mantle</span>
       </div>
+    </div>
+    <div class="fun-facts">
+      <h4>Fun Facts</h4>
+      <ul>
+        <li>Mercury has no atmosphere to retain heat</li>
+        <li>A day on Mercury lasts longer than its year</li>
+        <li>It has the most eccentric orbit of all planets</li>
+      </ul>
+    </div>
+  </section>
 
-      <div class="project-card placeholder-card">
-        <div class="card-thumb" style="background: radial-gradient(circle at 40% 40%, #B2E0E8, #7EC8D4, #3A9AAA);">
-          <svg width="80" height="80" viewBox="0 0 80 80"><circle cx="40" cy="40" r="36" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1"/></svg>
-        </div>
-        <div class="card-body">
-          <span class="card-tag">07 — Ice Giant</span>
-          <h3>Uranus</h3>
-          <p>Rotates on its side with an axial tilt of 98°. Its blue-green color comes from methane in its atmosphere.</p>
-          <div class="card-tools">
-            <span>Diameter: 50,724 km</span>
-            <span>Moons: 27</span>
-          </div>
-        </div>
+  <section class="planet-section">
+    <h2>Venus</h2>
+    <p class="planet-description">The hottest planet in our solar system due to its thick, toxic atmosphere.</p>
+    <div class="planet-info">
+      <div class="info-item">
+        <span class="info-label">Diameter</span>
+        <span class="info-value">12,104 km</span>
       </div>
-
-      <div class="project-card placeholder-card">
-        <div class="card-thumb" style="background: radial-gradient(circle at 40% 40%, #5B8CCC, #3A6AAA, #1A3E7A);">
-          <svg width="80" height="80" viewBox="0 0 80 80"><circle cx="40" cy="40" r="36" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1"/></svg>
-        </div>
-        <div class="card-body">
-          <span class="card-tag">08 — Ice Giant</span>
-          <h3>Neptune</h3>
-          <p>The windiest planet with speeds up to 2,100 km/h. It takes 165 Earth years to orbit the Sun once.</p>
-          <div class="card-tools">
-            <span>Diameter: 49,244 km</span>
-            <span>Moons: 16</span>
-          </div>
-        </div>
+      <div class="info-item">
+        <span class="info-label">Distance from Sun</span>
+        <span class="info-value">108.2 million km</span>
       </div>
+      <div class="info-item">
+        <span class="info-label">Orbital Period</span>
+        <span class="info-value">225 Earth days</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Moons</span>
+        <span class="info-value">0</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Temperature</span>
+        <span class="info-value">462°C (surface)</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Composition</span>
+        <span class="info-value">Rocky with dense CO₂ atmosphere</span>
+      </div>
+    </div>
+    <div class="fun-facts">
+      <h4>Fun Facts</h4>
+      <ul>
+        <li>Venus rotates backwards compared to most planets</li>
+        <li>Its atmosphere is 96.5% carbon dioxide</li>
+        <li>Surface pressure is 92 times that of Earth</li>
+      </ul>
+    </div>
+  </section>
 
+  <section class="planet-section">
+    <h2>Earth</h2>
+    <p class="planet-description">Our home planet. The only known planet to harbor life, with liquid water and a protective atmosphere.</p>
+    <div class="planet-info">
+      <div class="info-item">
+        <span class="info-label">Diameter</span>
+        <span class="info-value">12,756 km</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Distance from Sun</span>
+        <span class="info-value">149.6 million km</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Orbital Period</span>
+        <span class="info-value">365.25 days</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Moons</span>
+        <span class="info-value">1 (The Moon)</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Temperature</span>
+        <span class="info-value">-89°C to 58°C</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Composition</span>
+        <span class="info-value">Rocky with 71% water coverage</span>
+      </div>
+    </div>
+    <div class="fun-facts">
+      <h4>Fun Facts</h4>
+      <ul>
+        <li>Earth is the only planet not named after a god</li>
+        <li>It has the largest moon relative to planet size</li>
+        <li>Earth's magnetic field protects us from solar radiation</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="planet-section">
+    <h2>Mars</h2>
+    <p class="planet-description">The Red Planet, home to the largest volcano and canyon in the solar system.</p>
+    <div class="planet-info">
+      <div class="info-item">
+        <span class="info-label">Diameter</span>
+        <span class="info-value">6,792 km</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Distance from Sun</span>
+        <span class="info-value">227.9 million km</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Orbital Period</span>
+        <span class="info-value">687 Earth days</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Moons</span>
+        <span class="info-value">2 (Phobos, Deimos)</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Temperature</span>
+        <span class="info-value">-87°C to -5°C</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Composition</span>
+        <span class="info-value">Rocky with iron oxide surface</span>
+      </div>
+    </div>
+    <div class="fun-facts">
+      <h4>Fun Facts</h4>
+      <ul>
+        <li>Mars has the largest volcano in the solar system (Olympus Mons)</li>
+        <li>It has seasons similar to Earth due to axial tilt</li>
+        <li>Mars has polar ice caps made of water and CO₂</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="planet-section">
+    <h2>Jupiter</h2>
+    <p class="planet-description">The largest planet in our solar system. A gas giant with a Great Red Spot storm larger than Earth.</p>
+    <div class="planet-info">
+      <div class="info-item">
+        <span class="info-label">Diameter</span>
+        <span class="info-value">142,984 km</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Distance from Sun</span>
+        <span class="info-value">778.5 million km</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Orbital Period</span>
+        <span class="info-value">12 Earth years</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Moons</span>
+        <span class="info-value">95+</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Temperature</span>
+        <span class="info-value">-108°C (cloud tops)</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Composition</span>
+        <span class="info-value">Mostly hydrogen and helium</span>
+      </div>
+    </div>
+    <div class="fun-facts">
+      <h4>Fun Facts</h4>
+      <ul>
+        <li>Jupiter's Great Red Spot is a storm larger than Earth</li>
+        <li>It acts as a 'cosmic vacuum cleaner' protecting inner planets</li>
+        <li>Jupiter has more mass than all other planets combined</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="planet-section">
+    <h2>Saturn</h2>
+    <p class="planet-description">Famous for its spectacular ring system. Less dense than water, so it would float.</p>
+    <div class="planet-info">
+      <div class="info-item">
+        <span class="info-label">Diameter</span>
+        <span class="info-value">120,536 km</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Distance from Sun</span>
+        <span class="info-value">1.43 billion km</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Orbital Period</span>
+        <span class="info-value">29 Earth years</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Moons</span>
+        <span class="info-value">146+</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Temperature</span>
+        <span class="info-value">-139°C (cloud tops)</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Composition</span>
+        <span class="info-value">Mostly hydrogen and helium</span>
+      </div>
+    </div>
+    <div class="fun-facts">
+      <h4>Fun Facts</h4>
+      <ul>
+        <li>Saturn would float in water if there was a bathtub big enough</li>
+        <li>Its rings are made mostly of ice particles</li>
+        <li>Titan, its largest moon, has lakes of liquid methane</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="planet-section">
+    <h2>Uranus</h2>
+    <p class="planet-description">An ice giant that rotates on its side, making it unique among planets.</p>
+    <div class="planet-info">
+      <div class="info-item">
+        <span class="info-label">Diameter</span>
+        <span class="info-value">51,118 km</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Distance from Sun</span>
+        <span class="info-value">2.87 billion km</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Orbital Period</span>
+        <span class="info-value">84 Earth years</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Moons</span>
+        <span class="info-value">27+</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Temperature</span>
+        <span class="info-value">-197°C</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Composition</span>
+        <span class="info-value">Water, methane, ammonia ices</span>
+      </div>
+    </div>
+    <div class="fun-facts">
+      <h4>Fun Facts</h4>
+      <ul>
+        <li>Uranus rotates on its side at a 98-degree angle</li>
+        <li>It was the first planet discovered with a telescope</li>
+        <li>Its blue-green color comes from methane in its atmosphere</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="planet-section">
+    <h2>Neptune</h2>
+    <p class="planet-description">The windiest planet with speeds reaching 2,100 km/h, despite being farthest from the Sun.</p>
+    <div class="planet-info">
+      <div class="info-item">
+        <span class="info-label">Diameter</span>
+        <span class="info-value">49,528 km</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Distance from Sun</span>
+        <span class="info-value">4.5 billion km</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Orbital Period</span>
+        <span class="info-value">165 Earth years</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Moons</span>
+        <span class="info-value">16+</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Temperature</span>
+        <span class="info-value">-201°C</span>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Composition</span>
+        <span class="info-value">Water, methane, ammonia ices</span>
+      </div>
+    </div>
+    <div class="fun-facts">
+      <h4>Fun Facts</h4>
+      <ul>
+        <li>Neptune has the fastest winds in the solar system</li>
+        <li>It was discovered through mathematical predictions</li>
+        <li>Triton, its largest moon, orbits backwards</li>
+      </ul>
     </div>
   </section>
 
