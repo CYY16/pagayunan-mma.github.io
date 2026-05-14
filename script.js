@@ -23,7 +23,7 @@ const weekData = [
   },
   {
     title: "Week 5 — Roto Brush Tracing",
-    content: "Started tracing the subject using the Roto Brush Tool. Isolated the body into separate layers: shirt, pants, hair, shoes, and skin."
+    content: "Started tracing the subject using the Roto Brush Tool. Isolated the body into separate layers: shirt, pants, hair, shoes, and skin. <br /><a href=\"https://youtu.be/myBF0gUUijg\" target=\"_blank\" rel=\"noopener noreferrer\">Watch the Week 5 tutorial video</a>.<br /><br /><iframe width=\"100%\" height=\"315\" src=\"https://www.youtube.com/embed/myBF0gUUijg\" title=\"Week 5 Rotoscope Tutorial\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   },
   {
     title: "Week 6 — Layer Refinement",
