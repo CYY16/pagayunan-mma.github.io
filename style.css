@@ -259,10 +259,200 @@ img { max-width: 100%; display: block; border-radius: 12px; }
   margin-bottom: 16px;
 }
 
-.card-tools {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+/* =============================================
+   SOLAR SYSTEM PORTFOLIO PAGE
+   ============================================= */
+
+.solar-hero {
+  padding: 80px 40px 60px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.solar-hero h1 {
+  font-size: clamp(3rem, 6vw, 4rem);
+  font-weight: 800;
+  font-family: 'Syne', sans-serif;
+  margin-bottom: 16px;
+  color: #1A1A1A;
+}
+
+.solar-hero p {
+  font-size: 1.05rem;
+  color: #666;
+  max-width: 760px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.orbit-stage {
+  padding: 40px 20px 0;
+}
+
+.orbit-placeholder {
+  width: min(100%, 900px);
+  margin: 0 auto 40px;
+  aspect-ratio: 16 / 9;
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(26, 26, 26, 0.12), rgba(26, 26, 26, 0.04));
+  border: 1px dashed rgba(26, 26, 26, 0.15);
+  display: grid;
+  place-items: center;
+  color: #1A1A1A;
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.overview-section {
+  padding: 60px 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-bottom: 1px solid rgba(26, 26, 26, 0.1);
+}
+
+.overview-section h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  font-family: 'Syne', sans-serif;
+  color: #1A1A1A;
+  margin-bottom: 24px;
+}
+
+.overview-section p {
+  margin-bottom: 24px;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.planet-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(26, 26, 26, 0.08);
+  border-radius: 24px;
+  padding: 0;
+  overflow: hidden;
+  margin: 0 auto 40px;
+  max-width: 1000px;
+}
+
+.planet-card .planet-video {
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  object-fit: cover;
+  display: block;
+  background: #000;
+}
+
+.planet-card .planet-video-wrapper {
+  position: relative;
+  min-height: 360px;
+  background: #000;
+}
+
+.planet-card .planet-info-wrapper {
+  padding: 36px;
+}
+
+.planet-card .planet-info-wrapper h2 {
+  font-size: 2.25rem;
+  font-family: 'Syne', sans-serif;
+  margin-bottom: 18px;
+  color: #1A1A1A;
+}
+
+.planet-card .planet-info-wrapper .planet-description {
+  margin-bottom: 24px;
+  color: #333;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.planet-card .planet-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.planet-card .meta-item {
+  background: rgba(26, 26, 26, 0.04);
+  border-radius: 14px;
+  padding: 18px;
+}
+
+.planet-card .meta-item .info-label {
+  font-size: 0.85rem;
+  color: #666;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.planet-card .meta-item .info-value {
+  font-size: 1rem;
+  color: #1A1A1A;
+}
+
+.planet-card .fun-facts {
+  background: rgba(26, 26, 26, 0.05);
+  padding: 24px;
+  border-radius: 16px;
+}
+
+.planet-card .fun-facts h4 {
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: #1A1A1A;
+}
+
+.planet-card .fun-facts ul {
+  list-style: none;
+  padding: 0;
+}
+
+.planet-card .fun-facts li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.planet-card .fun-facts li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #666;
+}
+
+@media (min-width: 900px) {
+  .planet-card {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .planet-card .planet-info-wrapper {
+    padding: 48px;
+  }
+}
+
+@media (max-width: 860px) {
+  .solar-hero {
+    padding: 60px 24px 40px;
+  }
+
+  .overview-section,
+  .planet-card {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
 }
 
 .card-tools span {
