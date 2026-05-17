@@ -28,7 +28,12 @@
   <!-- orbit-stage intentionally left blank; user will add content here -->
   <section class="orbit-stage">
     <div class="orbit-placeholder">
-      SOLAR SYSTEM ANIMATION PLACEHOLDER
+      <div class="planet-video-wrapper">
+        <video class="planet-video" autoplay loop muted playsinline>
+          <source src="../videos/solarsystem.mkv" type="video/x-matroska">
+          Your browser does not support embedded videos. <a href="../videos/solarsystem.mkv">Download the video</a>.
+        </video>
+      </div>
     </div>
   </section>
 
@@ -50,6 +55,25 @@
       <div class="tool-item">
         <h4>Resolution</h4>
         <p>1920 x 1080</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="calculator-section">
+    <div class="calculator-card">
+      <div class="calculator-card-header">
+        <h2>Calculate Your Age in Other Planets</h2>
+      </div>
+      <div class="calculator-card-body">
+        <div class="calculator-form">
+          <label class="sr-only" for="earthAgeInput">Earth years</label>
+          <input id="earthAgeInput" class="calculator-input" type="number" min="0" step="0.1" placeholder="Enter Earth years" />
+          <button id="calculateBtn" class="calculator-button" type="button">
+            <span class="button-icon">🧮</span>
+            Calculate
+          </button>
+        </div>
+        <p class="calculator-footnote">ⓘ Enter Earth years to see ages, revolutions, orbital periods, and distances for all planets</p>
       </div>
     </div>
   </section>
@@ -93,15 +117,6 @@
           <span class="info-value">5,778 K (surface)</span>
         </div>
       </div>
-      <div class="fun-facts">
-        <h4>Fun Facts</h4>
-        <ul>
-          <li>The Sun contains 99.86% of the Solar System's mass</li>
-          <li>It's classified as a G-type main-sequence star</li>
-          <li>The Sun's core temperature is about 27 million degrees Fahrenheit</li>
-          <li>It converts 600 million tons of hydrogen into helium every second</li>
-        </ul>
-      </div>
     </div>
   </section>
   </div>
@@ -143,13 +158,23 @@
           <span class="info-value">Iron core, silicate mantle</span>
         </div>
       </div>
-      <div class="fun-facts">
-        <h4>Fun Facts</h4>
-        <ul>
-          <li>Mercury has no atmosphere to retain heat</li>
-          <li>A day on Mercury lasts longer than its year</li>
-          <li>It has the most eccentric orbit of all planets</li>
-        </ul>
+      <div class="planet-stats">
+        <div class="planet-stat">
+          <span class="stat-label">Age</span>
+          <span class="stat-value" data-stat="age">Put Your Age In the Textbox Above</span>
+        </div>
+        <div class="planet-stat">
+          <span class="stat-label">Revolutions</span>
+          <span class="stat-value" data-stat="revolutions">Put Your Age In the Textbox Above</span>
+        </div>
+        <div class="planet-stat">
+          <span class="stat-label">Orbit Time</span>
+          <span class="stat-value" data-stat="orbitTime">Put Your Age In the Textbox Above</span>
+        </div>
+        <div class="planet-stat">
+          <span class="stat-label">Distance from the Sun</span>
+          <span class="stat-value" data-stat="distance">Put Your Age In the Textbox Above</span>
+        </div>
       </div>
     </div>
   </section>
@@ -192,13 +217,23 @@
           <span class="info-value">Rocky with dense CO₂ atmosphere</span>
         </div>
       </div>
-      <div class="fun-facts">
-        <h4>Fun Facts</h4>
-        <ul>
-          <li>Venus rotates backwards compared to most planets</li>
-          <li>Its atmosphere is 96.5% carbon dioxide</li>
-          <li>Surface pressure is 92 times that of Earth</li>
-        </ul>
+      <div class="planet-stats">
+        <div class="planet-stat">
+          <span class="stat-label">Age</span>
+          <span class="stat-value" data-stat="age">Put Your Age In the Textbox Above</span>
+        </div>
+        <div class="planet-stat">
+          <span class="stat-label">Revolutions</span>
+          <span class="stat-value" data-stat="revolutions">Put Your Age In the Textbox Above</span>
+        </div>
+        <div class="planet-stat">
+          <span class="stat-label">Orbit Time</span>
+          <span class="stat-value" data-stat="orbitTime">Put Your Age In the Textbox Above</span>
+        </div>
+        <div class="planet-stat">
+          <span class="stat-label">Distance from the Sun</span>
+          <span class="stat-value" data-stat="distance">Put Your Age In the Textbox Above</span>
+        </div>
       </div>
     </div>
   </section>
@@ -241,13 +276,23 @@
           <span class="info-value">Rocky with 71% water coverage</span>
         </div>
       </div>
-      <div class="fun-facts">
-        <h4>Fun Facts</h4>
-        <ul>
-          <li>Earth is the only planet not named after a god</li>
-          <li>It has the largest moon relative to planet size</li>
-          <li>Earth's magnetic field protects us from solar radiation</li>
-        </ul>
+      <div class="planet-stats">
+        <div class="planet-stat">
+          <span class="stat-label">Age</span>
+          <span class="stat-value" data-stat="age">Put Your Age In the Textbox Above</span>
+        </div>
+        <div class="planet-stat">
+          <span class="stat-label">Revolutions</span>
+          <span class="stat-value" data-stat="revolutions">Put Your Age In the Textbox Above</span>
+        </div>
+        <div class="planet-stat">
+          <span class="stat-label">Orbit Time</span>
+          <span class="stat-value" data-stat="orbitTime">Put Your Age In the Textbox Above</span>
+        </div>
+        <div class="planet-stat">
+          <span class="stat-label">Distance from the Sun</span>
+          <span class="stat-value" data-stat="distance">Put Your Age In the Textbox Above</span>
+        </div>
       </div>
     </div>
   </section>
@@ -290,13 +335,23 @@
           <span class="info-value">Rocky with iron oxide surface</span>
         </div>
       </div>
-      <div class="fun-facts">
-        <h4>Fun Facts</h4>
-        <ul>
-          <li>Mars has the largest volcano in the solar system (Olympus Mons)</li>
-          <li>It has seasons similar to Earth due to axial tilt</li>
-          <li>Mars has polar ice caps made of water and CO₂</li>
-        </ul>
+      <div class="planet-stats">
+        <div class="planet-stat">
+          <span class="stat-label">Age</span>
+          <span class="stat-value" data-stat="age">Put Your Age In the Textbox Above</span>
+        </div>
+        <div class="planet-stat">
+          <span class="stat-label">Revolutions</span>
+          <span class="stat-value" data-stat="revolutions">Put Your Age In the Textbox Above</span>
+        </div>
+        <div class="planet-stat">
+          <span class="stat-label">Orbit Time</span>
+          <span class="stat-value" data-stat="orbitTime">Put Your Age In the Textbox Above</span>
+        </div>
+        <div class="planet-stat">
+          <span class="stat-label">Distance from the Sun</span>
+          <span class="stat-value" data-stat="distance">Put Your Age In the Textbox Above</span>
+        </div>
       </div>
     </div>
   </section>
@@ -339,13 +394,23 @@
           <span class="info-value">Mostly hydrogen and helium</span>
         </div>
       </div>
-      <div class="fun-facts">
-        <h4>Fun Facts</h4>
-        <ul>
-          <li>Jupiter's Great Red Spot is a storm larger than Earth</li>
-          <li>It acts as a 'cosmic vacuum cleaner' protecting inner planets</li>
-          <li>Jupiter has more mass than all other planets combined</li>
-        </ul>
+      <div class="planet-stats">
+        <div class="planet-stat">
+          <span class="stat-label">Age</span>
+          <span class="stat-value" data-stat="age">Put Your Age In the Textbox Above</span>
+        </div>
+        <div class="planet-stat">
+          <span class="stat-label">Revolutions</span>
+          <span class="stat-value" data-stat="revolutions">Put Your Age In the Textbox Above</span>
+        </div>
+        <div class="planet-stat">
+          <span class="stat-label">Orbit Time</span>
+          <span class="stat-value" data-stat="orbitTime">Put Your Age In the Textbox Above</span>
+        </div>
+        <div class="planet-stat">
+          <span class="stat-label">Distance from the Sun</span>
+          <span class="stat-value" data-stat="distance">Put Your Age In the Textbox Above</span>
+        </div>
       </div>
     </div>
   </section>
@@ -388,13 +453,23 @@
           <span class="info-value">Mostly hydrogen and helium</span>
         </div>
       </div>
-      <div class="fun-facts">
-        <h4>Fun Facts</h4>
-        <ul>
-          <li>Saturn would float in water if there was a bathtub big enough</li>
-          <li>Its rings are made mostly of ice particles</li>
-          <li>Titan, its largest moon, has lakes of liquid methane</li>
-        </ul>
+      <div class="planet-stats">
+        <div class="planet-stat">
+          <span class="stat-label">Age</span>
+          <span class="stat-value" data-stat="age">Put Your Age In the Textbox Above</span>
+        </div>
+        <div class="planet-stat">
+          <span class="stat-label">Revolutions</span>
+          <span class="stat-value" data-stat="revolutions">Put Your Age In the Textbox Above</span>
+        </div>
+        <div class="planet-stat">
+          <span class="stat-label">Orbit Time</span>
+          <span class="stat-value" data-stat="orbitTime">Put Your Age In the Textbox Above</span>
+        </div>
+        <div class="planet-stat">
+          <span class="stat-label">Distance from the Sun</span>
+          <span class="stat-value" data-stat="distance">Put Your Age In the Textbox Above</span>
+        </div>
       </div>
     </div>
   </section>
@@ -437,13 +512,23 @@
           <span class="info-value">Water, methane, ammonia ices</span>
         </div>
       </div>
-      <div class="fun-facts">
-        <h4>Fun Facts</h4>
-        <ul>
-          <li>Uranus rotates on its side at a 98-degree angle</li>
-          <li>It was the first planet discovered with a telescope</li>
-          <li>Its blue-green color comes from methane in its atmosphere</li>
-        </ul>
+      <div class="planet-stats">
+        <div class="planet-stat">
+          <span class="stat-label">Age</span>
+          <span class="stat-value" data-stat="age">Put Your Age In the Textbox Above</span>
+        </div>
+        <div class="planet-stat">
+          <span class="stat-label">Revolutions</span>
+          <span class="stat-value" data-stat="revolutions">Put Your Age In the Textbox Above</span>
+        </div>
+        <div class="planet-stat">
+          <span class="stat-label">Orbit Time</span>
+          <span class="stat-value" data-stat="orbitTime">Put Your Age In the Textbox Above</span>
+        </div>
+        <div class="planet-stat">
+          <span class="stat-label">Distance from the Sun</span>
+          <span class="stat-value" data-stat="distance">Put Your Age In the Textbox Above</span>
+        </div>
       </div>
     </div>
   </section>
@@ -486,17 +571,28 @@
           <span class="info-value">Water, methane, ammonia ices</span>
         </div>
       </div>
-      <div class="fun-facts">
-        <h4>Fun Facts</h4>
-        <ul>
-          <li>Neptune has the fastest winds in the solar system</li>
-          <li>It was discovered through mathematical predictions</li>
-          <li>Triton, its largest moon, orbits backwards</li>
-        </ul>
+      <div class="planet-stats">
+        <div class="planet-stat">
+          <span class="stat-label">Age</span>
+          <span class="stat-value" data-stat="age">Put Your Age In the Textbox Above</span>
+        </div>
+        <div class="planet-stat">
+          <span class="stat-label">Revolutions</span>
+          <span class="stat-value" data-stat="revolutions">Put Your Age In the Textbox Above</span>
+        </div>
+        <div class="planet-stat">
+          <span class="stat-label">Orbit Time</span>
+          <span class="stat-value" data-stat="orbitTime">Put Your Age In the Textbox Above</span>
+        </div>
+        <div class="planet-stat">
+          <span class="stat-label">Distance from the Sun</span>
+          <span class="stat-value" data-stat="distance">Put Your Age In the Textbox Above</span>
+        </div>
       </div>
     </div>
   </section>
   </section>
+  <script src="../ageCalcu.js"></script>
 
   <!-- FOOTER -->
   <footer class="footer">
