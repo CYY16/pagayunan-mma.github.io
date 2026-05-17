@@ -371,6 +371,9 @@ img { max-width: 100%; display: block; border-radius: 12px; }
 }
 
 .planet-card .planet-video-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   position: relative;
   width: 100%;
   padding: 20px 0;
