@@ -1,4 +1,6 @@
-﻿const placeholderText = 'Put Your Age In the Textbox Above';
+﻿/* jshint esversion: 6 */
+
+const placeholderText = 'Put Your Age In the Textbox Above';
 
 const planetData = {
   sun: { orbitTime: 'N/A', distance: '0 km', periodRatio: null },
