@@ -23,15 +23,15 @@ const weekData = [
   },
   {
     title: "Week 5 — Roto Brush Tracing",
-    content: "Started tracing the subject using the Roto Brush Tool. Isolated the body into separate layers: shirt, pants, hair, shoes, and skin." 
+    content: "Started tracing the subject using the Roto Brush Tool. Isolated the body into separate layers: shirt, pants, hair, shoes, and skin. <br /><a href=\"https://youtu.be/AIfD80Jl3RI\" target=\"_blank\" rel=\"noopener noreferrer\">Watch the Week 5 video</a>.<br /><br /><iframe width=\"100%\" height=\"315\" src=\"https://www.youtube.com/embed/AIfD80Jl3RI\" title=\"Week 5 Rotoscope Video\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   },
   {
     title: "Week 6 — Layer Refinement",
-    content: "Refined edges on each isolated layer. Froze propagation on completed layers to prevent accidental edits."
+    content: "Refined edges on each isolated layer. Froze propagation on completed layers to prevent accidental edits. <br /><a href=\"https://youtu.be/XB8lH2MF90w\" target=\"_blank\" rel=\"noopener noreferrer\">Watch the Week 6 video</a>.<br /><br /><iframe width=\"100%\" height=\"315\" src=\"https://www.youtube.com/embed/XB8lH2MF90w\" title=\"Week 6 Rotoscope Video\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   },
   {
     title: "Week 7 — Color Fills",
-    content: "Applied solid color fills to each layer to create the stylized rotoscope look. Experimented with different color palettes."
+    content: "Applied solid color fills to each layer to create the stylized rotoscope look. Experimented with different color palettes. <br /><a href=\"https://youtu.be/_pg4CIznH5k\" target=\"_blank\" rel=\"noopener noreferrer\">Watch the Week 7 video</a>.<br /><br /><iframe width=\"100%\" height=\"315\" src=\"https://www.youtube.com/embed/_pg4CIznH5k\" title=\"Week 7 Rotoscope Video\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   },
   {
     title: "Week 8 — Rendering",
