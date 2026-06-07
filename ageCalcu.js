@@ -85,12 +85,27 @@ function calculateAgeOnPlanets() {
 const calculateBtn = document.getElementById('calculateBtn');
 const earthInput = document.getElementById('earthAgeInput');
 
+function setCalculateButtonState(isLoading) {
+  if (!calculateBtn) return;
+  calculateBtn.disabled = isLoading;
+  calculateBtn.textContent = isLoading ? 'Calculating...' : 'Calculate';
+}
+
+function handleCalculateButton() {
+  if (!calculateBtn || !earthInput) return;
+  setCalculateButtonState(true);
+  setTimeout(() => {
+    calculateAgeOnPlanets();
+    setCalculateButtonState(false);
+  }, 600);
+}
+
 if (calculateBtn && earthInput) {
-  calculateBtn.addEventListener('click', calculateAgeOnPlanets);
+  calculateBtn.addEventListener('click', handleCalculateButton);
   earthInput.addEventListener('keydown', event => {
     if (event.key === 'Enter') {
       event.preventDefault();
-      calculateAgeOnPlanets();
+      handleCalculateButton();
     }
   });
 }

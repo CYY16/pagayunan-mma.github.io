@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 </head>
-<body>
+<body id="top">
 
   <!-- NAVBAR -->
   <nav class="navbar">
@@ -17,10 +17,12 @@
       <li><a href="index.html#projects">Projects</a></li>
       <li><a href="about.html" class="active">About</a></li>
     </ul>
+    <button type="button" class="theme-toggle" aria-label="Toggle dark mode">☀</button>
   </nav>
 
   <!-- ABOUT HERO -->
   <section class="about">
+    <a href="index.html" class="back-link">← Back to Home</a>
     <h2 class="section-title">About</h2>
     <div class="about-content">
       <p>Hi! I'm Cyrus T. Pagayunan</p>
@@ -33,5 +35,30 @@
     <p>© 2026 Cyrus T. Pagayunan BSIT-NS-2A. All rights reserved.</p>
   </footer>
 
+  <a href="#top" class="back-to-top">↑</a>
+  <script>
+    const backTopBtn = document.querySelector('.back-to-top');
+    const themeToggle = document.querySelector('.theme-toggle');
+    const applyTheme = theme => {
+      document.body.classList.toggle('dark', theme === 'dark');
+      if (!themeToggle) return;
+      themeToggle.textContent = theme === 'dark' ? '☾' : '☀';
+      themeToggle.style.color = theme === 'dark' ? '#FFFFFF' : '#111418';
+    };
+    const savedTheme = localStorage.getItem('theme');
+    applyTheme(savedTheme === 'dark' ? 'dark' : 'light');
+    if (themeToggle) {
+      themeToggle.addEventListener('click', () => {
+        const next = document.body.classList.contains('dark') ? 'light' : 'dark';
+        applyTheme(next);
+        localStorage.setItem('theme', next);
+      });
+    }
+    window.addEventListener('scroll', () => {
+      if (!backTopBtn) return;
+      if (window.scrollY > 260) backTopBtn.classList.add('show');
+      else backTopBtn.classList.remove('show');
+    });
+  </script>
 </body>
 </html>

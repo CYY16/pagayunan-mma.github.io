@@ -95,6 +95,194 @@ img { max-width: 100%; display: block; border-radius: 12px; }
   /* nav-links uses hardcoded colors for dark contrast, no var fallbacks needed */
 }
 
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  z-index: 102;
+  width: 50px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  background: #F9C846;
+  color: #111418;
+  display: grid;
+  place-items: center;
+  font-size: 1.1rem;
+  font-family: 'Segoe UI Symbol', Arial, sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-2px);
+  background: #F9D66A;
+}
+
+body.dark .theme-toggle {
+  background: #FFD74A;
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+body.dark {
+  background-color: #0D1117;
+  color: #E5E7EB;
+  animation: none;
+}
+
+body.dark .brand-logo,
+body.dark .hero-tag,
+body.dark .project-hero-tag,
+body.dark .section-title,
+body.dark .card-tag,
+body.dark .solar-hero h1,
+body.dark .solar-hero p,
+body.dark .about-content p,
+body.dark .planet-description,
+body.dark .planet-meta .meta-item,
+body.dark .planet-meta .meta-item span,
+body.dark .planet-meta .info-label,
+body.dark .planet-meta .info-value,
+body.dark .planet-stats,
+body.dark .planet-stats .planet-stat,
+body.dark .planet-stats .planet-stat span,
+body.dark .planet-card h2,
+body.dark .planet-card span,
+body.dark .footer,
+body.dark .week-card p,
+body.dark .back-link,
+body.dark .calculator-card p,
+body.dark .calculator-button,
+body.dark .calculator-footnote,
+body.dark .info-label,
+body.dark .info-value {
+  color: #E5E7EB;
+}
+
+body.dark .solar-hero .back-link {
+  color: #E5E7EB;
+}
+
+body.dark .step-num,
+body.dark .step-text h3,
+body.dark .step-text p,
+body.dark .step-text img,
+body.dark .tools-grid .tool-item h4,
+body.dark .tools-grid .tool-item p,
+body.dark .planet-meta .meta-item,
+body.dark .planet-meta .meta-item span,
+body.dark .planet-meta .info-label,
+body.dark .planet-meta .info-value,
+body.dark .planet-stat,
+body.dark .planet-stat .stat-label,
+body.dark .planet-stat .stat-value {
+  color: #E5E7EB;
+}
+
+body.dark .step-num {
+  color: #BCCAD6;
+}
+
+body.dark .step-text img {
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+body.dark .planet-meta .meta-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 16px;
+}
+
+body.dark .planet-stat + .planet-stat {
+  border-top-color: rgba(255, 255, 255, 0.12);
+}
+
+body.dark .navbar {
+  background: transparent;
+}
+
+body.dark .nav-links {
+  background: rgba(10, 14, 22, 0.92);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+body.dark .nav-links a {
+  color: #F4F7FB;
+}
+
+body.dark .btn-primary {
+  background: #EAE8E4;
+  color: #111418;
+}
+
+body.dark .project-card,
+body.dark .week-card,
+body.dark .planet-card,
+body.dark .about,
+body.dark .orbit-placeholder,
+body.dark .video-wrapper,
+body.dark .orbit-video-wrapper,
+body.dark .calculator-card,
+body.dark .calculator-input,
+body.dark .calculator-button,
+body.dark .tools-grid .tool-item {
+  background: #141A24;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+body.dark .planet-card {
+  background: #141A24;
+}
+
+body.dark .planet-meta .meta-item,
+body.dark .planet-stats,
+body.dark .planet-stats .planet-stat,
+body.dark .planet-card .planet-info-wrapper,
+body.dark .planet-card .meta-item,
+body.dark .calculator-card,
+body.dark .calculator-card-header h2,
+body.dark .calculator-card p,
+body.dark .calculator-button,
+body.dark .calculator-footnote,
+body.dark .planet-card h2,
+body.dark .planet-card span,
+body.dark .info-label,
+body.dark .info-value {
+  color: #E5E7EB;
+}
+
+body.dark .card-thumb {
+  background: #1D242E;
+}
+
+body.dark .section-title {
+  color: #F4F7FB;
+}
+
+body.dark .footer {
+  color: #8B96A4;
+}
+
+body.dark .card-body p,
+body.dark .solar-hero p,
+body.dark .overview-section p,
+body.dark .planet-description,
+body.dark .planet-meta .meta-item,
+body.dark .planet-meta .meta-item span,
+body.dark .card-tag,
+body.dark .card-tools span,
+body.dark .stat-label,
+body.dark .stat-value,
+body.dark .week-card p,
+body.dark .card-thumb-placeholder,
+body.dark .back-link,
+body.dark .hero-sub {
+  color: #E5E7EB;
+}
+
 .nav-links a {
   font-size: 0.85rem;
   font-weight: 500;
@@ -183,6 +371,48 @@ img { max-width: 100%; display: block; border-radius: 12px; }
   transform: translateY(-2px);
 }
 
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #1A1A1A;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.back-link:hover {
+  opacity: 0.8;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 999;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(26, 26, 26, 0.92);
+  color: #F4F2EE;
+  text-decoration: none;
+  font-size: 0.95rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
 /* =============================================
    SECTION TITLES
    ============================================= */
@@ -204,22 +434,44 @@ img { max-width: 100%; display: block; border-radius: 12px; }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 420px));
+  justify-content: center;
   gap: 24px;
 }
 
 .project-card {
   background: #D9D7D3;
   border: 1px solid #D0CECA;
-  border-radius: 12px;
+  border-radius: 20px;
   overflow: hidden;
-  transition: transform 0.25s, border-color 0.25s;
-  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 0 0 rgba(255, 255, 255, 0);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
 }
 
 .project-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-8px);
   border-color: #1A1A1A;
+  box-shadow: 0 28px 60px rgba(26, 26, 26, 0.14), 0 0 42px rgba(66, 120, 255, 0.18);
+}
+
+.project-card:hover::before {
+  opacity: 1;
+  box-shadow: inset 0 0 120px rgba(66, 120, 255, 0.08);
 }
 
 .placeholder-card { cursor: default; }
@@ -227,16 +479,22 @@ img { max-width: 100%; display: block; border-radius: 12px; }
 
 .card-thumb {
   background: #CFC8C0;
-  height: 200px;
+  height: 220px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-bottom: 1px solid #D0CECA;
 }
 
-.card-thumb-placeholder { font-size: 3rem; }
+.card-thumb-placeholder { font-size: 4rem; }
 
-.card-body { padding: 24px; }
+.card-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
 
 .card-tag {
   font-size: 0.72rem;
@@ -248,16 +506,280 @@ img { max-width: 100%; display: block; border-radius: 12px; }
 
 .card-body h3 {
   font-family: 'Syne', sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 700;
   margin: 8px 0;
 }
 
 .card-body p {
   color: #666666;
-  font-size: 0.9rem;
-  margin-bottom: 16px;
+  font-size: 0.95rem;
+  margin-bottom: 0;
 }
+
+.card-tools {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.video-section {
+  padding: 80px 60px;
+}
+
+.video-wrapper {
+  width: min(100%, 760px);
+  aspect-ratio: 16 / 9;
+  margin: 0 auto;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.18);
+  background: #000;
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: none;
+}
+
+.progress-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.week-card {
+  position: relative;
+  background: #F4F2EE;
+  border: 1px solid rgba(26, 26, 26, 0.08);
+  border-radius: 26px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 18px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  overflow: hidden;
+}
+
+.week-card iframe {
+  width: 100%;
+  min-height: 180px;
+  border-radius: 18px;
+  border: 1px solid #D0CECA;
+}
+
+
+.week-card {
+  position: relative;
+  background: #F4F2EE;
+  border: 1px solid rgba(26, 26, 26, 0.08);
+  border-radius: 26px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+  gap: 18px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  overflow: hidden;
+}
+
+.week-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(circle at top, rgba(66, 120, 255, 0.16), transparent 45%);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
+.week-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 28px 60px rgba(25, 25, 25, 0.12), 0 0 40px rgba(66, 120, 255, 0.14);
+}
+
+.week-card:hover::before {
+  opacity: 1;
+}
+
+.week-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: #1A1A1A;
+  color: #EAE8E4;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.week-thumb {
+  width: 62px;
+  height: 62px;
+  display: grid;
+  place-items: center;
+  border-radius: 20px;
+  background: rgba(26, 26, 26, 0.08);
+  font-size: 1.8rem;
+}
+
+.week-card p {
+  margin: 0;
+  color: #4A4A4A;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .progress-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .progress-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.orbit-stage {
+  padding: 80px 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.orbit-placeholder {
+  width: 100%;
+  max-width: 1280px;
+  padding: 22px;
+  border-radius: 28px;
+  background: #D9D7D3;
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.14);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.orbit-video-wrapper {
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 28px;
+  overflow: hidden;
+  background: #000;
+}
+
+.orbit-video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.orbit-placeholder:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 34px 90px rgba(0, 0, 0, 0.2), 0 0 48px rgba(66, 120, 255, 0.16);
+}
+
+.orbit-video-wrapper {
+  width: 100%;
+  max-width: none;
+  aspect-ratio: 16 / 9;
+  border-radius: 28px;
+  overflow: hidden;
+  background: #000;
+}
+
+.planet-video-wrapper {
+  width: 100%;
+  max-width: 840px;
+  aspect-ratio: 16 / 9;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #000;
+}
+
+.planet-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.planet-grid {
+  padding: 80px 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
+}
+
+.planet-card-shell {
+  width: 100%;
+}
+
+.planet-card {
+  background: #F4F2EE;
+  border: 1px solid rgba(26, 26, 26, 0.08);
+  border-radius: 28px;
+  padding: 24px;
+  display: grid;
+  gap: 18px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.planet-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 34px 80px rgba(25, 25, 25, 0.14), 0 0 45px rgba(66, 120, 255, 0.16);
+  border-color: rgba(66, 120, 255, 0.24);
+}
+
+.planet-info-wrapper {
+  display: grid;
+  gap: 16px;
+}
+
+.planet-meta {
+  display: grid;
+  gap: 12px;
+}
+
+.planet-description,
+.planet-meta .meta-item,
+.planet-stats {
+  color: #4A4A4A;
+}
+
+@media (max-width: 860px) {
+  .orbit-stage,
+  .planet-grid,
+  .video-section,
+  .projects,
+  .overview-section {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
 
 /* =============================================
    SOLAR SYSTEM PORTFOLIO PAGE
@@ -286,6 +808,17 @@ img { max-width: 100%; display: block; border-radius: 12px; }
   line-height: 1.8;
 }
 
+.solar-hero .back-link {
+  display: block;
+  margin: 0 0 32px 0;
+  text-align: left;
+  color: #1A1A1A;
+}
+
+.solar-hero .back-link:hover {
+  color: #333;
+}
+
 .orbit-stage {
   padding: 40px 20px 0;
 }
@@ -293,28 +826,37 @@ img { max-width: 100%; display: block; border-radius: 12px; }
 .orbit-placeholder {
   width: 100%;
   max-width: none;
-  margin: 0 auto 40px;
+  margin: 40px auto;
   aspect-ratio: 16 / 9;
   border-radius: 24px;
   background: transparent;
   border: none;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
 }
 
+.orbit-placeholder .orbit-video-wrapper,
 .orbit-placeholder .planet-video-wrapper {
   display: flex;
   width: 100%;
   height: 100%;
+  min-width: 0;
+  min-height: 0;
   padding: 0;
   margin: 0;
   background: transparent;
 }
 
+.orbit-placeholder .orbit-video,
 .orbit-placeholder .planet-video {
   width: 100%;
   height: 100%;
+  min-width: 100%;
+  min-height: 100%;
   object-fit: cover;
+  object-position: center;
   display: block;
 }
 
@@ -634,6 +1176,37 @@ img { max-width: 100%; display: block; border-radius: 12px; }
   .planet-card:nth-of-type(even) .planet-info-wrapper {
     order: 1;
   }
+}
+
+body.dark .planet-card,
+body.dark .planet-card .planet-info-wrapper,
+body.dark .planet-card .planet-meta,
+body.dark .planet-card .planet-meta .meta-item,
+body.dark .planet-card .planet-meta .info-label,
+body.dark .planet-card .planet-meta .info-value,
+body.dark .planet-stats,
+body.dark .planet-stats .planet-stat,
+body.dark .planet-stats .planet-stat .stat-label,
+body.dark .planet-stats .planet-stat .stat-value,
+body.dark .calculator-card,
+body.dark .calculator-card-header h2,
+body.dark .calculator-card p,
+body.dark .calculator-input,
+body.dark .calculator-button,
+body.dark .calculator-footnote {
+  background: #141A24;
+  color: #E5E7EB;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+body.dark .calculator-input {
+  background: #1D242E;
+  color: #E5E7EB;
+}
+
+body.dark .calculator-button {
+  background: #F9C846;
+  color: #111418;
 }
 
 @media (max-width: 860px) {
