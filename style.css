@@ -185,8 +185,16 @@ body.dark .step-num {
   color: #BCCAD6;
 }
 
+body.dark .step-text {
+  color: #E5E7EB;
+}
+
 body.dark .step-text img {
   border-color: rgba(255, 255, 255, 0.12);
+}
+
+body.dark .step-item:hover .step-text {
+  background: rgba(66, 120, 255, 0.06);
 }
 
 body.dark .planet-meta .meta-item {
@@ -1415,6 +1423,7 @@ body.dark .calculator-button {
   grid-template-columns: 60px 1fr;
   gap: 24px;
   align-items: start;
+  cursor: pointer;
 }
 
 .step-num {
@@ -1426,18 +1435,52 @@ body.dark .calculator-button {
   user-select: none;
 }
 
+.step-text {
+  position: relative;
+  padding: 20px;
+  border-radius: 12px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  background: transparent;
+  overflow: hidden;
+}
+
+.step-text::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(circle at top, rgba(66, 120, 255, 0.16), transparent 45%);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
+.step-item:hover .step-text {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 50px rgba(25, 25, 25, 0.1), 0 0 35px rgba(66, 120, 255, 0.12);
+  background: rgba(66, 120, 255, 0.03);
+}
+
+.step-item:hover .step-text::before {
+  opacity: 1;
+}
+
 .step-text h3 {
   font-family: 'Syne', sans-serif;
   font-size: 1.1rem;
   font-weight: 700;
   margin-bottom: 8px;
   color: #1A1A1A;
+  position: relative;
+  z-index: 1;
 }
 
 .step-text p {
   color: #666666;
   font-size: 0.95rem;
   margin-bottom: 16px;
+  position: relative;
+  z-index: 1;
 }
 
 .step-text img {
@@ -1445,6 +1488,15 @@ body.dark .calculator-button {
   max-width: 600px;
   border: 1px solid #D0CECA;
   border-radius: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.step-text iframe {
+  width: 100%;
+  border-radius: 8px;
+  position: relative;
+  z-index: 1;
 }
 
 /* =============================================
