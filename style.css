@@ -288,6 +288,32 @@ body.dark .week-card p,
 body.dark .card-thumb-placeholder,
 body.dark .back-link,
 body.dark .hero-sub {
+  color: #FFFFFF;
+}
+
+body.dark .overview-section {
+  background: #141A24;
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+body.dark .overview-section:hover {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+}
+
+body.dark .overview-section h2 {
+  color: #FFFFFF;
+}
+
+body.dark .overview-section p {
+  color: #E5E7EB;
+}
+
+body.dark .tools-grid .tool-item h4 {
+  color: #BCCAD6;
+}
+
+body.dark .tools-grid .tool-item p {
   color: #E5E7EB;
 }
 
@@ -828,7 +854,7 @@ body.dark .hero-sub {
 }
 
 .orbit-stage {
-  padding: 40px 20px 0;
+  padding: 20px 20px 0;
 }
 
 .orbit-placeholder {
@@ -869,11 +895,22 @@ body.dark .hero-sub {
 }
 
 .overview-section {
-  padding: 60px 24px;
+  padding: 60px 40px;
   width: 100%;
   max-width: none;
-  margin: 0 auto;
-  border-bottom: 1px solid rgba(26, 26, 26, 0.1);
+  margin: 40px 0 60px 0;
+  background: #F4F2EE;
+  border-radius: 0;
+  border: none;
+  border-top: 1px solid rgba(26, 26, 26, 0.08);
+  border-bottom: 1px solid rgba(26, 26, 26, 0.08);
+  box-shadow: 0 2px 8px rgba(26, 26, 26, 0.04);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.overview-section:hover {
+  box-shadow: 0 12px 32px rgba(26, 26, 26, 0.12);
+  transform: none;
 }
 
 .overview-section h2 {
@@ -881,14 +918,36 @@ body.dark .hero-sub {
   font-weight: 800;
   font-family: 'Syne', sans-serif;
   color: #1A1A1A;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
 
 .overview-section p {
-  margin-bottom: 24px;
-  font-size: 1.05rem;
+  margin-bottom: 16px;
+  font-size: 1rem;
   line-height: 1.8;
   color: #333;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.tools-grid .tool-item h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.tools-grid .tool-item p {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.6;
 }
 
 .calculator-section {
@@ -1352,19 +1411,15 @@ body.dark .calculator-button {
   color: #1A1A1A;
 }
 
-.disclaimer {
-  font-size: 0.8rem;
-  color: #666666;
-  font-style: italic;
-  margin-top: 12px;
-}
-
 /* =============================================
    VIDEO SECTION
    ============================================= */
 .video-section {
   padding: 60px;
   border-bottom: 1px solid #D0CECA;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .video-wrapper {
@@ -1375,6 +1430,7 @@ body.dark .calculator-button {
   overflow: hidden;
   background: #CFC8C0;
   max-width: 900px;
+  width: 100%;
 }
 
 .video-wrapper iframe {
@@ -1385,37 +1441,12 @@ body.dark .calculator-button {
   border-radius: 12px;
 }
 
-.video-placeholder {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #CFC8C0;
-  border: 2px dashed #D0CECA;
-  border-radius: 12px;
-  font-size: 1.1rem;
+.disclaimer {
+  font-size: 0.8rem;
   color: #666666;
-}
-
-.video-placeholder p {
-  margin: 0;
-}
-
-/* =============================================
-   STEPS SECTION
-   ============================================= */
-.steps-section {
-  padding: 80px 60px;
-  border-bottom: 1px solid #D0CECA;
-}
-
-.steps-list {
-  display: flex;
-  flex-direction: column;
-  gap: 60px;
-  max-width: 860px;
+  font-style: italic;
+  margin-top: 16px;
+  text-align: center;
 }
 
 .step-item {
@@ -1627,4 +1658,393 @@ body.dark .calculator-button {
   text-transform: uppercase;
   color: #1A1A1A;
   opacity: 0.8;
+}
+
+/* =============================================
+   CAROUSEL (Steps Section)
+   ============================================= */
+.steps-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.carousel-arrow {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #D0CECA;
+  background: transparent;
+  color: #1A1A1A;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.carousel-arrow:hover {
+  background: #1A1A1A;
+  color: #EAE8E4;
+  transform: scale(1.1);
+  box-shadow: 0 8px 24px rgba(26, 26, 26, 0.15);
+}
+
+.carousel-container {
+  flex: 1;
+  max-width: 700px;
+}
+
+.step-counter {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #666666;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.step-counter span {
+  font-size: 1.2rem;
+  color: #1A1A1A;
+  font-weight: 800;
+}
+
+.carousel-viewport {
+  overflow: hidden;
+  border-radius: 16px;
+  height: 600px;
+  position: relative;
+}
+
+.steps-track {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 100%;
+}
+
+.step-card {
+  flex: 0 0 100%;
+  min-height: 100%;
+  padding: 32px;
+  background: #F4F2EE;
+  border: 1px solid rgba(26, 26, 26, 0.08);
+  border-radius: 16px;
+  animation: slideUp 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.step-card h3 {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #1A1A1A;
+}
+
+.step-card p {
+  color: #666666;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.step-card img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid #D0CECA;
+  margin-top: 16px;
+}
+
+.step-card iframe {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 16px;
+  display: block;
+}
+
+body.dark .carousel-arrow {
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #E5E7EB;
+}
+
+body.dark .carousel-arrow:hover {
+  background: #E5E7EB;
+  color: #0D1117;
+}
+
+body.dark .step-counter {
+  color: #8B96A4;
+}
+
+body.dark .step-counter span {
+  color: #E5E7EB;
+}
+
+body.dark .step-card {
+  background: #141A24;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+body.dark .step-card h3 {
+  color: #E5E7EB;
+}
+
+body.dark .step-card p {
+  color: #8B96A4;
+}
+
+body.dark .step-card img {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* =============================================
+   EXPLORE MORE PROJECTS
+   ============================================= */
+.explore-section {
+  padding: 40px 60px;
+  background: linear-gradient(135deg, #1A1A1A 0%, #2A2A2A 100%);
+  text-align: center;
+  border-radius: 16px;
+  margin: 0 60px 60px;
+}
+
+.explore-section h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #EAE8E4;
+  margin-bottom: 8px;
+}
+
+.explore-section p {
+  font-size: 0.9rem;
+  color: #BCCAD6;
+  max-width: 500px;
+  margin: 0 auto 20px;
+}
+
+.explore-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.explore-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  border-radius: 100px;
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.explore-primary {
+  background: #EAE8E4;
+  color: #1A1A1A;
+  border: 2px solid #EAE8E4;
+}
+
+.explore-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(234, 232, 228, 0.25);
+  background: #F4F2EE;
+}
+
+.explore-secondary {
+  background: transparent;
+  color: #EAE8E4;
+  border: 2px solid #D0CECA;
+}
+
+.explore-secondary:hover {
+  background: rgba(234, 232, 228, 0.1);
+  border-color: #EAE8E4;
+  transform: translateY(-3px);
+}
+
+body.dark .explore-section {
+  background: linear-gradient(135deg, #1A1A1A 0%, #2A2A2A 100%);
+}
+
+body.dark .explore-section h2 {
+  color: #EAE8E4;
+}
+
+body.dark .explore-section p {
+  color: #BCCAD6;
+}
+
+/* =============================================
+   DOWNLOAD SECTION (solarsystem.html)
+   ============================================= */
+.download-section {
+  padding: 40px 60px;
+  background: linear-gradient(135deg, #1A1A1A 0%, #2A2A2A 100%);
+  text-align: center;
+  border-radius: 16px;
+  margin: 0 60px 60px;
+}
+
+.download-section h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #EAE8E4;
+  margin-bottom: 8px;
+}
+
+.download-section p {
+  font-size: 0.9rem;
+  color: #BCCAD6;
+  max-width: 500px;
+  margin: 0 auto 20px;
+}
+
+.download-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  border-radius: 100px;
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  transition: all 0.25s ease;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.download-primary {
+  background: #EAE8E4;
+  color: #1A1A1A;
+  border: 2px solid #EAE8E4;
+}
+
+.download-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(234, 232, 228, 0.25);
+  background: #F4F2EE;
+}
+
+.download-secondary {
+  background: transparent;
+  color: #EAE8E4;
+  border: 2px solid #D0CECA;
+}
+
+.download-secondary:hover {
+  background: rgba(234, 232, 228, 0.1);
+  border-color: #EAE8E4;
+  transform: translateY(-3px);
+}
+
+body.dark .download-section {
+  background: linear-gradient(135deg, #1A1A1A 0%, #2A2A2A 100%);
+}
+
+body.dark .download-section h2 {
+  color: #EAE8E4;
+}
+
+body.dark .download-section p {
+  color: #BCCAD6;
+}
+
+@media (max-width: 768px) {
+  .download-section {
+    padding: 30px 24px;
+    margin: 0 24px 60px;
+  }
+
+  .download-section h2 {
+    font-size: 1.2rem;
+  }
+
+  .download-section p {
+    font-size: 0.8rem;
+  }
+
+  .download-buttons {
+    gap: 8px;
+  }
+
+  .download-btn {
+    padding: 8px 18px;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .explore-section {
+    padding: 30px 24px;
+    margin: 0 24px 60px;
+  }
+
+  .explore-section h2 {
+    font-size: 1.2rem;
+  }
+
+  .explore-section p {
+    font-size: 0.8rem;
+  }
+
+  .explore-buttons {
+    gap: 8px;
+  }
+
+  .explore-btn {
+    padding: 8px 18px;
+    font-size: 0.75rem;
+  }
+
+  .steps-carousel {
+    gap: 16px;
+  }
+
+  .carousel-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .carousel-viewport {
+    height: 500px;
+  }
 }

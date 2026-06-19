@@ -23,15 +23,14 @@
   <!-- PROJECT HERO -->
   <section class="project-hero">
     <a href="../index.html" class="back-link">← Back to Home</a>
-    <div class="project-hero-tag">Animation · Rotoscope</div>
-    <h1>1-Minute Rotoscope Video</h1>
-    <p>A frame-by-frame animation created using Rotoscoping techniques.</p>
+    <div class="project-hero-tag">	Multimedia and Authoring</div>
+    <h1>Rotoscope Animation Project</h1>
+    <p>A frame-by-frame animation created and edited using the apps below.</p>
     <div class="tool-badges">
       <span class="tool-badge">Adobe After Effects</span>
       <span class="tool-badge">CapCut</span>
 
     </div>
-    <p class="disclaimer">Disclaimer: This video was created for academic purposes only.</p>
   </section>
 
 <!-- VIDEO -->
@@ -44,86 +43,62 @@
       allowfullscreen>
     </iframe>
   </div>
+  <p class="disclaimer">Disclaimer: This video was created for academic purposes only.</p>
 </section>
 
   <!-- STEP-BY-STEP TUTORIAL -->
   <section class="steps-section">
     <h2 class="section-title">Step-by-Step Tutorial</h2>
-    <div class="steps-list">
-
-      <div class="step-item">
-        <div class="step-num">1</div>
-        <div class="step-text">
-          <h3>Select Source Material</h3>
-          <p>Choose a high-quality video with clear subject-background contrast and interesting movement patterns.</p>
-          <iframe src="https://www.youtube.com/embed/dMlrPndRUtM" title="Step 1: Select Source Material" width="100%" height="300" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="steps-carousel">
+      <button class="carousel-arrow left-arrow" aria-label="Previous step">←</button>
+      <div class="carousel-container">
+        <div class="step-counter"><span id="current-step">1</span> / 8</div>
+        <div class="carousel-viewport">
+          <div class="steps-track" id="steps-track">
+            <div class="step-card" data-step="1">
+              <h3>Select Source Video</h3>
+              <p>Select the video you want to animate. For the best results, make sure it is high-quality, the subject clearly stands out from the background, and there is some fun movement.</p>
+              <iframe src="https://www.youtube.com/embed/dMlrPndRUtM" title="Step 1: Select Source Material" width="100%" height="300" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="step-card" data-step="2">
+              <h3>Break Down the Video</h3>
+              <p>Use CapCut to break your video down into 5-second parts so it is easier to work with.</p>
+              <img src="../images/capcut.png" alt="Cutting video into clips in CapCut">
+            </div>
+            <div class="step-card" data-step="3">
+              <h3>Put the videos into new Compositions</h3>
+              <p>In After Effects, take each 5-second piece of your video and place it into its own brand-new composition.</p>
+              <img src="../images/composition.png" alt="Creating new composition in After Effects">
+            </div>
+            <div class="step-card" data-step="4">
+              <h3>Trace Each Layer</h3>
+              <p>Use the Roto Brush Tool to trace the shirt, pants, body, hair, and shoes, putting each on its own layer. Freeze each layer so you can work on them individually.</p>
+              <img src="../images/layer.png" alt="Using Roto Brush Tool to isolate subject">
+            </div>
+            <div class="step-card" data-step="5">
+              <h3>Fill the Layers with Colors</h3>
+              <p>Fill each of your separated layers (like the shirt, pants, and hair) with a single, solid color. This gets them ready to be styled.</p>
+              <img src="../images/trace.png" alt="Adding fill colors to layers">
+            </div>
+            <div class="step-card" data-step="6">
+              <h3>Render All Compositions</h3>
+              <p>Now it is time to save your work. Add each 5-second piece to the Render Queue and export them, making sure to keep your export settings exactly the same across the board</p>
+              <img src="../images/render.png" alt="Rendering compositions in After Effects">
+            </div>
+            <div class="step-card" data-step="7">
+              <h3>Compile All 5-Second Clips</h3>
+              <p>Bring all your finished clips back into CapCut and put them in order.</p>
+              <img src="../images/export.png" alt="Compiling clips in CapCut">
+            </div>
+            <div class="step-card" data-step="8">
+              <h3>Edit Lyrics & Background</h3>
+              <p>Use CapCut to add your lyrics and match them to the music. Change the background colors to make your final video look great.</p>
+              <img src="../images/lyrics.png" alt="Editing lyrics in CapCut">
+            </div>
+          </div>
         </div>
       </div>
-
-      <div class="step-item">
-        <div class="step-num">2</div>
-        <div class="step-text">
-          <h3>Cut the Video into 5-Second Clips</h3>
-          <p>Use CapCut to split the selected video into 5-second segments for easier editing.</p>
-          <!-- REPLACE src with your actual screenshot -->
-          <img src="../images/capcut.png" alt="Cutting video into clips in CapCut">
-        </div>
-      </div>
-
-      <div class="step-item">
-        <div class="step-num">3</div>
-        <div class="step-text">
-          <h3>Create a New Composition</h3>
-          <p>In After Effects, create a separate 5-second composition for each clip segment.</p>
-          <img src="../images/composition.png" alt="Creating new composition in After Effects">
-        </div>
-      </div>
-
-      <div class="step-item">
-        <div class="step-num">4</div>
-        <div class="step-text">
-          <h3>Trace Each Layer</h3>
-          <p>Isolate the subject into separate layers (shirt, pants, body, hair, shoes) using the Roto Brush Tool. Freeze each layer to edit others independently.</p>
-          <img src="../images/layer.png" alt="Using Roto Brush Tool to isolate subject">
-        </div>
-      </div>
-
-      <div class="step-item">
-        <div class="step-num">5</div>
-        <div class="step-text">
-          <h3>Add Fill Colors to Layers</h3>
-          <p>Apply solid color fills to each isolated layer (shirt, pants, hair, etc.) to prepare for stylization.</p>
-          <img src="../images/trace.png" alt="Adding fill colors to layers">
-        </div>
-      </div>
-
-      <div class="step-item">
-        <div class="step-num">6</div>
-        <div class="step-text">
-          <h3>Render All Compositions</h3>
-          <p>Export each 5-second composition through the Render Queue with consistent settings.</p>
-          <img src="../images/render.png" alt="Rendering compositions in After Effects">
-        </div>
-      </div>
-
-      <div class="step-item">
-        <div class="step-num">7</div>
-        <div class="step-text">
-          <h3>Compile All 5-Second Clips</h3>
-          <p>Combine all clips in CapCut, add audio, and export in mp4 format.</p>
-          <img src="../images/export.png" alt="Compiling clips in CapCut">
-        </div>
-      </div>
-
-      <div class="step-item">
-        <div class="step-num">8</div>
-        <div class="step-text">
-          <h3>Edit Lyrics & Background</h3>
-          <p>Use Adobe Premiere Pro to add lyrics, sync them with the audio, and change background colors to enhance visual appeal.</p>
-          <img src="../images/lyrics.png" alt="Editing lyrics in Adobe Premiere Pro">
-        </div>
-      </div>
-
+      <button class="carousel-arrow right-arrow" aria-label="Next step">→</button>
     </div>
   </section>
 
@@ -182,6 +157,20 @@
     </div>
   </section>
 
+  <!-- EXPLORE MORE PROJECTS -->
+  <section class="explore-section">
+    <h2>Explore More Projects</h2>
+    <p>Continue your journey through my multimedia portfolio and discover more creative works.</p>
+    <div class="explore-buttons">
+      <a href="../portfolio/solarsystem.html" class="explore-btn explore-primary">
+        🌍 Solar System Animation
+      </a>
+      <a href="../index.html" class="explore-btn explore-secondary">
+        🏠 Back to Home
+      </a>
+    </div>
+  </section>
+
   <a href="#top" class="back-to-top">↑</a>
   <!-- FOOTER -->
   <footer class="footer">
@@ -189,6 +178,7 @@
   </footer>
 
   <script>
+    // Theme Toggle
     const backTopBtn = document.querySelector('.back-to-top');
     const themeToggle = document.querySelector('.theme-toggle');
     const applyTheme = theme => {
@@ -211,6 +201,37 @@
       if (window.scrollY > 260) backTopBtn.classList.add('show');
       else backTopBtn.classList.remove('show');
     });
+
+    // Carousel Functionality
+    let currentStep = 1;
+    const totalSteps = 8;
+    const track = document.getElementById('steps-track');
+    const currentStepDisplay = document.getElementById('current-step');
+    const leftArrow = document.querySelector('.left-arrow');
+    const rightArrow = document.querySelector('.right-arrow');
+
+    const updateCarousel = () => {
+      const offset = -(currentStep - 1) * 100;
+      track.style.transform = `translateY(${offset}%)`;
+      currentStepDisplay.textContent = currentStep;
+    };
+
+    const nextStep = () => {
+      if (currentStep < totalSteps) {
+        currentStep++;
+        updateCarousel();
+      }
+    };
+
+    const prevStep = () => {
+      if (currentStep > 1) {
+        currentStep--;
+        updateCarousel();
+      }
+    };
+
+    rightArrow.addEventListener('click', nextStep);
+    leftArrow.addEventListener('click', prevStep);
   </script>
 </body>
 </html>

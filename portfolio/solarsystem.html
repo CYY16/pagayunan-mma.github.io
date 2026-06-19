@@ -596,6 +596,20 @@
   </section>
   <script src="../ageCalcu.js"></script>
 
+  <!-- EXPLORE MORE PROJECTS -->
+  <section class="download-section">
+    <h2>Explore More Projects</h2>
+    <p>Continue your journey through my multimedia portfolio and discover more creative works.</p>
+    <div class="download-buttons">
+      <button class="download-btn download-primary" id="downloadBlenderBtn">
+        ⬇ Download Blender Project
+      </button>
+      <a href="../portfolio/rotoscope.html" class="download-btn download-secondary">
+        ← View Rotoscoping Project
+      </a>
+    </div>
+  </section>
+
   <!-- FOOTER -->
   <footer class="footer">
     <p>© 2026 Cyrus T. Pagayunan BSIT-NS-2A. All rights reserved.</p>
@@ -605,6 +619,8 @@
   <script>
     const backTopBtn = document.querySelector('.back-to-top');
     const themeToggle = document.querySelector('.theme-toggle');
+    const downloadBtn = document.querySelector('#downloadBlenderBtn');
+    
     const applyTheme = theme => {
       document.body.classList.toggle('dark', theme === 'dark');
       if (!themeToggle) return;
@@ -620,6 +636,13 @@
         localStorage.setItem('theme', next);
       });
     }
+    
+    if (downloadBtn) {
+      downloadBtn.addEventListener('click', () => {
+        window.open('https://drive.google.com/drive/folders/10XGqKWtQooW-iJcNSEPmPnMrZtEV2JHC?usp=sharing', '_blank');
+      });
+    }
+    
     window.addEventListener('scroll', () => {
       if (!backTopBtn) return;
       if (window.scrollY > 260) backTopBtn.classList.add('show');
