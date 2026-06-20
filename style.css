@@ -32,6 +32,29 @@ body {
   }
 }
 
+@keyframes cardSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes logoFloat {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
 body::before {
   content: '';
   position: fixed;
@@ -1324,18 +1347,142 @@ body.dark .calculator-button {
 }
 
 /* =============================================
-   ABOUT (index.html)
+   ABOUT (about.html)
    ============================================= */
-.about {
+.about-hero {
   padding: 80px 60px;
   border-top: 1px solid #D0CECA;
-  max-width: 700px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.about-content p {
-  font-size: 1.05rem;
+.about-hero .section-title {
+  margin-bottom: 20px;
+}
+
+.about-sections {
+  padding: 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.about-card {
+  background: #D9D7D3;
+  border: 1px solid #D0CECA;
+  border-radius: 20px;
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+  animation: cardSlideIn 0.5s ease-out forwards;
+}
+
+.about-card:nth-child(1) { animation-delay: 0.1s; }
+.about-card:nth-child(2) { animation-delay: 0.2s; }
+.about-card:nth-child(3) { animation-delay: 0.3s; }
+.about-card:nth-child(4) { animation-delay: 0.4s; }
+
+.about-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 0 0 rgba(255, 255, 255, 0);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.about-card:hover {
+  transform: translateY(-8px);
+  border-color: #1A1A1A;
+  box-shadow: 0 28px 60px rgba(26, 26, 26, 0.14), 0 0 42px rgba(66, 120, 255, 0.18);
+}
+
+.about-card:hover::before {
+  opacity: 1;
+  box-shadow: inset 0 0 120px rgba(66, 120, 255, 0.08);
+}
+
+.about-card-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1A1A1A;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.about-card-text {
+  font-size: 0.95rem;
   color: #666666;
-  line-height: 1.9;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.tools-grid-about {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+  margin-top: 8px;
+}
+
+.tool-logo {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  flex-shrink: 0;
+}
+
+.tool-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.tool-logo:hover img {
+  transform: scale(1.15);
+  box-shadow: 0 8px 24px rgba(66, 120, 255, 0.28), 0 0 20px rgba(249, 200, 70, 0.15);
+  filter: brightness(1.1);
+  animation: logoFloat 0.6s ease-in-out;
+}
+
+/* Dark mode about styles */
+body.dark .about-hero {
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+body.dark .about-card {
+  background: #141A24;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+body.dark .about-card:hover {
+  border-color: #FFFFFF;
+}
+
+body.dark .about-card-title {
+  color: #F4F7FB;
+}
+
+body.dark .about-card-text {
+  color: #E5E7EB;
 }
 
 /* =============================================
@@ -1605,11 +1752,12 @@ body.dark .calculator-button {
 @media (max-width: 768px) {
   .navbar { padding: 16px 24px; }
   .nav-links { gap: 20px; }
-  .hero, .projects, .about, .footer,
+  .hero, .projects, .about, .about-hero, .about-sections, .footer,
   .project-hero, .video-section,
   .steps-section, .progress-section { padding-left: 24px; padding-right: 24px; }
   .step-item { grid-template-columns: 40px 1fr; }
   .step-num { font-size: 2rem; }
+  .about-sections { grid-template-columns: 1fr; }
 }
 
 /* =============================================
