@@ -1710,7 +1710,7 @@ body.dark .about-card-text {
 
 .week-btn.active {
   background: #1A1A1A;
-  border-color: #1A1A1A;
+  border-color: transparent;
   color: #EAE8E4;
   font-weight: 600;
 }
@@ -2017,7 +2017,7 @@ body.dark .step-card img {
 .explore-primary {
   background: #EAE8E4;
   color: #1A1A1A;
-  border: 2px solid #EAE8E4;
+  border: 2px solid transparent;
 }
 
 .explore-primary:hover {
@@ -2102,7 +2102,7 @@ body.dark .explore-section p {
 .download-primary {
   background: #EAE8E4;
   color: #1A1A1A;
-  border: 2px solid #EAE8E4;
+  border: 2px solid transparent;
 }
 
 .download-primary:hover {
