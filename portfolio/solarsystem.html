@@ -60,6 +60,47 @@ This project is a 3D animated model of our solar system. It features the Sun and
     </div>
   </section>
 
+  <!-- STEP-BY-STEP TUTORIAL -->
+  <section class="solar-tutorial-section">
+    <h2 class="section-title">Step-by-Step Tutorial</h2>
+    <div class="steps-carousel">
+      <button class="carousel-arrow left-arrow" aria-label="Previous step">←</button>
+      <div class="carousel-container">
+        <div class="step-counter"><span id="current-step">1</span> / 5</div>
+        <div class="carousel-viewport solar-tutorial-viewport">
+          <div class="steps-track" id="steps-track">
+            <div class="step-card" data-step="1">
+              <h3>Open Blender and Create a New File</h3>
+              <p>Launch the Blender application on your computer. On the splash screen, select General under New File to open a clean workspace.</p>
+              <img src="../images/solarsystem_steps/1.png">
+            </div>
+            <div class="step-card" data-step="2">
+              <h3>Switch to the Scripting Workspace</h3>
+              <p>Look at the top menu bar and click Scripting. In the Text Editor panel, click New to create a new script.</p>
+               <img src="../images/solarsystem_steps/2.png">
+            </div>
+            <div class="step-card" data-step="3">
+              <h3>Paste and Run Your Code</h3>
+              <p>Click inside the text area and paste or type your Python code, then run it.</p>
+               <img src="../images/solarsystem_steps/3.png">
+            </div>
+            <div class="step-card" data-step="4">
+              <h3>Adjust Viewport and Settings</h3>
+              <p>Switch back to the Layout or Modeling workspace to see your generated objects. Adjust your camera view, framing, and light settings based on your preference.</p>
+              <img src="../images/solarsystem_steps/4.png">
+            </div>
+            <div class="step-card" data-step="5">
+              <h3>Render the Final Scene</h3>
+              <p>Select Render Image, or press F12, for a single frame. Select Render Animation, or press Ctrl + F12, if your script created a moving scene.</p>
+              <img src="../images/solarsystem_steps/5.png">
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-arrow right-arrow" aria-label="Next step">→</button>
+    </div>
+  </section>
+
   <section class="calculator-section">
     <div class="calculator-card">
       <div class="calculator-card-header">
@@ -593,6 +634,65 @@ This project is a 3D animated model of our solar system. It features the Sun and
     </div>
   </section>
   </div>
+
+  <div class="planet-card-shell">
+    <section id="pluto" class="planet-card">
+      <div class="planet-video-wrapper">
+      <video class="planet-video" autoplay loop muted playsinline>
+        <source src="../videos/pluto.mkv" type="video/x-matroska">
+        Your browser does not support embedded videos. <a href="../videos/pluto.mkv">Download the video</a>.
+      </video>
+    </div>
+    <div class="planet-info-wrapper">
+      <h2>Pluto</h2>
+      <p class="planet-description">A small icy dwarf planet in the Kuiper Belt. Pluto was once counted as the ninth major planet, but it was reclassified as a dwarf planet because it has not cleared its orbital neighborhood.</p>
+      <div class="planet-meta">
+        <div class="meta-item">
+          <span class="info-label">Diameter</span>
+          <span class="info-value">2,377 km</span>
+        </div>
+        <div class="meta-item">
+          <span class="info-label">Distance from Sun</span>
+          <span class="info-value">5.9 billion km</span>
+        </div>
+        <div class="meta-item">
+          <span class="info-label">Orbital Period</span>
+          <span class="info-value">248 Earth years</span>
+        </div>
+        <div class="meta-item">
+          <span class="info-label">Moons</span>
+          <span class="info-value">5</span>
+        </div>
+        <div class="meta-item">
+          <span class="info-label">Temperature</span>
+          <span class="info-value">-229°C</span>
+        </div>
+        <div class="meta-item">
+          <span class="info-label">Classification</span>
+          <span class="info-value">Dwarf planet</span>
+        </div>
+      </div>
+      <div class="planet-stats">
+        <div class="planet-stat">
+          <span class="stat-label">Age</span>
+          <span class="stat-value" data-stat="age">Put Your Age In the Textbox Above</span>
+        </div>
+        <div class="planet-stat">
+          <span class="stat-label">Revolutions</span>
+          <span class="stat-value" data-stat="revolutions">Put Your Age In the Textbox Above</span>
+        </div>
+        <div class="planet-stat">
+          <span class="stat-label">Orbit Time</span>
+          <span class="stat-value" data-stat="orbitTime">Put Your Age In the Textbox Above</span>
+        </div>
+        <div class="planet-stat">
+          <span class="stat-label">Distance from the Sun</span>
+          <span class="stat-value" data-stat="distance">Put Your Age In the Textbox Above</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>
   </div>
   <script src="../ageCalcu.js"></script>
 
@@ -640,6 +740,35 @@ This project is a 3D animated model of our solar system. It features the Sun and
     if (downloadBtn) {
       downloadBtn.addEventListener('click', () => {
         window.open('https://drive.google.com/drive/folders/10XGqKWtQooW-iJcNSEPmPnMrZtEV2JHC?usp=sharing', '_blank');
+      });
+    }
+
+    const stepsTrack = document.getElementById('steps-track');
+    const currentStepDisplay = document.getElementById('current-step');
+    const leftArrow = document.querySelector('.left-arrow');
+    const rightArrow = document.querySelector('.right-arrow');
+    let currentStep = 1;
+    const totalSteps = 5;
+
+    const updateCarousel = () => {
+      if (!stepsTrack || !currentStepDisplay) return;
+      stepsTrack.style.transform = `translateY(-${(currentStep - 1) * 100}%)`;
+      currentStepDisplay.textContent = currentStep;
+    };
+
+    if (leftArrow && rightArrow) {
+      rightArrow.addEventListener('click', () => {
+        if (currentStep < totalSteps) {
+          currentStep++;
+          updateCarousel();
+        }
+      });
+
+      leftArrow.addEventListener('click', () => {
+        if (currentStep > 1) {
+          currentStep--;
+          updateCarousel();
+        }
       });
     }
     

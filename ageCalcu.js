@@ -11,7 +11,8 @@ const planetData = {
   jupiter: { orbitTime: '11.862615 Earth years', distance: '778.5 million km', periodRatio: 11.862615 },
   saturn: { orbitTime: '29.447498 Earth years', distance: '1.43 billion km', periodRatio: 29.447498 },
   uranus: { orbitTime: '84.016846 Earth years', distance: '2.87 billion km', periodRatio: 84.016846 },
-  neptune: { orbitTime: '164.79132 Earth years', distance: '4.50 billion km', periodRatio: 164.79132 }
+  neptune: { orbitTime: '164.79132 Earth years', distance: '4.50 billion km', periodRatio: 164.79132 },
+  pluto: { orbitTime: '247.94 Earth years', distance: '5.90 billion km', periodRatio: 247.94 }
 };
 
 function formatPlanetValue(value) {

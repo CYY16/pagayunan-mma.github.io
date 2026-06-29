@@ -1968,6 +1968,59 @@ body.dark .step-card img {
 }
 
 /* =============================================
+   CREDITS / SOLAR TUTORIAL
+   ============================================= */
+.credits-section,
+.solar-tutorial-section {
+  padding: 40px 60px;
+}
+
+.credits-card {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 28px 32px;
+  background: #F4F2EE;
+  border: 1px solid rgba(26, 26, 26, 0.08);
+  border-radius: 16px;
+}
+
+.credits-card p {
+  margin: 0;
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.credits-card p + p {
+  margin-top: 10px;
+}
+
+.solar-tutorial-viewport {
+  height: 360px;
+}
+
+body.dark .credits-card {
+  background: #141A24;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+body.dark .credits-card p {
+  color: #8B96A4;
+}
+
+@media (max-width: 768px) {
+  .credits-section,
+  .solar-tutorial-section {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .solar-tutorial-viewport {
+    height: 440px;
+  }
+}
+
+/* =============================================
    EXPLORE MORE PROJECTS
    ============================================= */
 .explore-section {
