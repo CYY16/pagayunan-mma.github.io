@@ -192,6 +192,7 @@ body.dark .step-num,
 body.dark .step-text h3,
 body.dark .step-text p,
 body.dark .step-text img,
+body.dark .tools-grid .tool-item h3,
 body.dark .tools-grid .tool-item h4,
 body.dark .tools-grid .tool-item p,
 body.dark .planet-meta .meta-item,
@@ -332,6 +333,7 @@ body.dark .overview-section p {
   color: #E5E7EB;
 }
 
+body.dark .tools-grid .tool-item h3,
 body.dark .tools-grid .tool-item h4 {
   color: #BCCAD6;
 }
@@ -958,6 +960,7 @@ body.dark .tools-grid .tool-item p {
   margin-top: 32px;
 }
 
+.tools-grid .tool-item h3,
 .tools-grid .tool-item h4 {
   font-size: 0.95rem;
   font-weight: 700;
@@ -1920,6 +1923,7 @@ body.dark .about-card-text {
 
 .step-card img {
   width: 100%;
+  display: block;
   border-radius: 12px;
   border: 1px solid #D0CECA;
   margin-top: 16px;
@@ -1996,7 +2000,13 @@ body.dark .step-card img {
 }
 
 .solar-tutorial-viewport {
-  height: 360px;
+  height: 560px;
+}
+
+.solar-tutorial-viewport .step-card img {
+  max-height: 340px;
+  object-fit: contain;
+  background: #FFFFFF;
 }
 
 body.dark .credits-card {
@@ -2016,7 +2026,11 @@ body.dark .credits-card p {
   }
 
   .solar-tutorial-viewport {
-    height: 440px;
+    height: 520px;
+  }
+
+  .solar-tutorial-viewport .step-card img {
+    max-height: 300px;
   }
 }
 
